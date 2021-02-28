@@ -7,6 +7,8 @@ defmodule RedpayWeb.Router do
 
   scope "/api", RedpayWeb do
     pipe_through :api
+
+    get "/:filename", WelcomeController, :index
   end
 
   # Enables LiveDashboard only for development
